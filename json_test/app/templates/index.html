@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <p id="words">not loaded yet</p>
+    <script>
+    var getData = $.get('/data');
+
+    getData.done(function(results) {
+      console.log(results);
+      document.getElementById('words').innerHTML =
+results.data;
+    });
+      </script>
+  </body>
+</html>
